@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  nameInputValue = 'Test Test';
+
+  nameObj = {
+    name: 'Ivan'
+  };
+
+  constructor() {
+
+    setTimeout(()=> {
+      this.nameInputValue = 'Changed!'
+    }, 4000)
+  }
+
+
+  nameInputButtonClick($event: any) {
+    console.log($event)
+  }
 }
