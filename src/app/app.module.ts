@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register-form/register-form.comp
 import { HighlightDirective } from './directives/highlight.directive';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { RxJSComponent } from './components/rx-js/rx-js.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RxJSComponent } from './components/rx-js/rx-js.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

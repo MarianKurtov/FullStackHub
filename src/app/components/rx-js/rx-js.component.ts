@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {fromEvent, interval, map} from "rxjs";
+import { fromEvent, interval, map } from 'rxjs';
 
 //create observable that emits click events
 const source = fromEvent(document, 'keyup');
@@ -23,9 +23,8 @@ interval(1000)
     let m = date.getMinutes()
     let s = date.getSeconds();
     const time = `${h}:${m}:${s}`;
-    console.log(time)
+    // console.log(time)
   });
-
 
 @Component({
   selector: 'app-rx-js',
@@ -35,4 +34,3 @@ interval(1000)
 
 export class RxJSComponent {
 }
-

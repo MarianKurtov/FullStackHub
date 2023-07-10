@@ -9,16 +9,17 @@
   <div>
     <button [value]="defaultValue" (click)="clickBtnHandler($event)" appHighlight>{{clickMe}}</button>
   </div>
-  <div *ngIf="changer">
-    Is visible.
-  </div>
-  <div>
-  <button (click)="changeVisibility()" appHighlight>
-    {{hideMe}}
-  </button>
+    <div *ngIf="changer">
+      Is visible.
+    </div>
+    <div>
+
+    <button (click)="changeVisibility()" appHighlight>
+      {{hideMe}}
+    </button>
 
     <ul>
-      <li *ngFor="let user of users">
+      <li *ngFor="let user of usersArray">
         <p>
           <span>{{user.firstName}} </span>
           <span>{{user.lastName}} </span>
@@ -26,5 +27,12 @@
         </p>
       </li>
     </ul>
+
+    <div *ngIf="users ===null">{{loading}}</div>
+    <div *ngIf="users !==null">
+      <ul>
+        <li *ngFor="let user of users">{{user.name}}</li>
+      </ul>
+    </div>
 
 </div>

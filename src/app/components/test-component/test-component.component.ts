@@ -6,7 +6,6 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./test-component.component.css']
 })
 export class TestComponentComponent{
-
   @Input() ob1j = { name: 'Marian' };
   @Input() ob2j = { name: 'Marian' };
 }
