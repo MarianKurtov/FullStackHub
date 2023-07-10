@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register-form/register-form.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { TestComponentComponent } from './components/test-component/test-component.component';
+import { RxJSComponent } from './components/rx-js/rx-js.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     HighlightDirective,
-    TestComponentComponent
+    TestComponentComponent,
+    RxJSComponent
   ],
   imports: [
     BrowserModule,
