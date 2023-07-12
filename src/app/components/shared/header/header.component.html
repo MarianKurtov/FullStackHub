@@ -6,10 +6,18 @@
     <div class="mini-navbar">
       <ul>
         <li>
-          <a href="#">Login</a>
+          <a href="#" (click)="logInHandler()" *ngIf="!isLogin">Login</a>
         </li>
         <li>
           <a href="#">Register</a>
+        </li>
+        <li>
+          <a href="#" (click)="logInHandler()" *ngIf="isLogin">
+              <div>
+                HELLO, {{ name }}
+              </div>
+            <a (click)="logOutHandler()">Logout</a>
+          </a>
         </li>
       </ul>
     </div>

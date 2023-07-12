@@ -11,8 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from "@angular/forms";
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { AslideComponent } from './components/aslide/aslide.component';
+import { AsideComponent } from './components/aslide/aside.component';
 import {ThemeListComponent} from "./components/theme-list/theme-list.component";
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,9 @@ import {ThemeListComponent} from "./components/theme-list/theme-list.component";
     RxJSComponent,
     HeaderComponent,
     FooterComponent,
-    AslideComponent,
+    AsideComponent,
     ThemeListComponent,
+    UserComponent,
 
   ],
     imports: [
@@ -34,6 +36,10 @@ import {ThemeListComponent} from "./components/theme-list/theme-list.component";
         FormsModule
     ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+      AppComponent,
+      HeaderComponent,
+      FooterComponent
+  ]
 })
 export class AppModule { }

@@ -8,11 +8,23 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+  public isLogged: boolean;
 
   constructor(public http: HttpClient) {
+    this.isLogged = false
   }
 
   loadUsers(): Observable<IUser[]> {
     return this.http.get<IUser[]>(environment.USERS + 'users');
+  }
+
+  logIn(): void {
+    this.isLogged = true;
+    console.log('logIn');
+  }
+
+  logOut(): void {
+    this.isLogged = false;
+    console.log('logOut');
   }
 }
