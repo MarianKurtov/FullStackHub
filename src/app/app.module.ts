@@ -8,6 +8,11 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { RxJSComponent } from './components/rx-js/rx-js.component';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { AslideComponent } from './components/aslide/aslide.component';
+import {ThemeListComponent} from "./components/theme-list/theme-list.component";
 
 @NgModule({
   declarations: [
@@ -15,13 +20,19 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     HighlightDirective,
     TestComponentComponent,
-    RxJSComponent
+    RxJSComponent,
+    HeaderComponent,
+    FooterComponent,
+    AslideComponent,
+    ThemeListComponent,
+
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

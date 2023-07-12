@@ -33,6 +33,7 @@ export class RegisterComponent {
   @Input() defaultValue = 'Insert your name here!';
   //Emitting event when it's happen
   @Output() btnClickEmitter = new EventEmitter();
+  name = "Marian";
 
   constructor(userService: UserService) {
     userService.loadUsers().subscribe(u => {
