@@ -1,41 +1,21 @@
-<input type="text" [(ngModel)]="name">
-<p>Hello, {{ name }}!</p>
+<div class="aside">
 
-<h1 appHighlight>{{header}}</h1>
-<div  class="header">
-  <h2 >{{header2}}</h2>
-  <h3 >{{header3}}</h3>
-</div>
-  <div>
-      <input [value]="defaultValue" type="text" (keyup)="keyboardInput($event)">
-  </div>
-  <div>
-    <button [value]="defaultValue" (click)="clickBtnHandler($event)" appHighlight>{{clickMe}}</button>
-  </div>
-    <div *ngIf="changer">
-      Is visible.
+  <h2 class="title">
+    Recent Themes
+  </h2>
+
+  <div *ngFor="let user of this.users">
+    <div class="aside-theme">
+      <a href="#">
+        <h3>{{ user.name }}</h3>
+        <p>{{ user.email }}</p>
+        <p><span>{{ user.phone }}</span></p>
+      </a>
     </div>
-    <div>
+  </div>
 
-    <button (click)="changeVisibility()" appHighlight>
-      {{hideMe}}
-    </button>
-
-    <ul>
-      <li *ngFor="let user of usersArray">
-        <p>
-          <span>{{user.firstName}} </span>
-          <span>{{user.lastName}} </span>
-          <span>{{user.age}} </span>
-        </p>
-      </li>
-    </ul>
-
-    <div *ngIf="users ===null">{{loading}}</div>
-    <div *ngIf="users !==null">
-      <ul>
-        <li *ngFor="let user of users">{{user.name}}</li>
-      </ul>
-    </div>
+  <div *ngIf="users === null">
+    {{ loading }}
+  </div>
 
 </div>
