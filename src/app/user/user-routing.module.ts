@@ -4,7 +4,7 @@ import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   {
-    path: 'userList',
+    path: 'user/list',
     component: ListComponent
   },
   {

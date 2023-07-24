@@ -8,6 +8,7 @@ import { ShortenPipe } from './pipes/shorten.pipe';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { UserModule} from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     CoreModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [
