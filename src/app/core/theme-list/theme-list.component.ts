@@ -12,8 +12,8 @@ export class ThemeListComponent {
   loading = 'Loading...';
 
   constructor(public themesService: ThemesService) {
-    this.themesService.loadAllThemes().subscribe(t => {
-      this.themes = t;
-    })
+    // this.themesService.loadAllThemes().subscribe(t => {
+    //   this.themes = t;
+    // })
   }
 }

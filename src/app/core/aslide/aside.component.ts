@@ -12,8 +12,8 @@ export class AsideComponent {
   posts: IPost[] | null = null;
 
   constructor(themeService: ThemesService) {
-    themeService.loadAllPosts().subscribe( p => {
-      this.posts = p;
-    })
+    // themeService.loadAllPosts().subscribe( p => {
+    //   this.posts = p;
+    // })
   }
 }

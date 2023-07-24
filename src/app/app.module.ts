@@ -1,43 +1,32 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { RegisterComponent } from './components/register-form/register-form.component';
 import { HighlightDirective } from './directives/highlight.directive';
-import { RxJSComponent } from './components/rx-js/rx-js.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
-import { AsideComponent } from './components/aslide/aside.component';
-import { ThemeListComponent } from './components/theme-list/theme-list.component';
 import { ShortenPipe } from './pipes/shorten.pipe';
+import { CoreModule } from './core/core.module';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     HighlightDirective,
-    RxJSComponent,
-    HeaderComponent,
-    FooterComponent,
-    AsideComponent,
-    ThemeListComponent,
-    ShortenPipe,
-
+    ShortenPipe
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CoreModule,
+  ],
   providers: [],
   bootstrap: [
       AppComponent,
-      HeaderComponent,
-      FooterComponent
+      // HeaderComponent,
+      // FooterComponent
   ]
 })
 export class AppModule { }

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class UserService {
   public isLogged: boolean;
 
-  constructor(public http: HttpClient) {
+  constructor(private http: HttpClient) {
     this.isLogged = false
   }
 
