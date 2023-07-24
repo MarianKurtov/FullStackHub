@@ -8,7 +8,7 @@ const routes: Routes = [
     component: ListComponent
   },
   {
-    path: 'user/:id',
+    path: 'user/details/:id',
     component: DetailComponent
   }
 ];
