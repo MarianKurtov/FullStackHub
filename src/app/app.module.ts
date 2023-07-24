@@ -22,7 +22,7 @@ import { UserModule} from './user/user.module';
     HttpClientModule,
     FormsModule,
     CoreModule,
-    UserModule
+    UserModule,
   ],
   providers: [],
   bootstrap: [

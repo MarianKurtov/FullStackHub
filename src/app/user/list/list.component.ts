@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {IUser} from "../../interfaces/user";
+import {UserService} from "../user.service";
 
 @Component({
   selector: 'app-list',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
+  public users: IUser[] | null = null;
+  loading = 'Loading...';
 
+  constructor(userService: UserService) {
+    userService.loadUsers().subscribe(u => {
+      this.users = u;
+    })
+  }
 }
