@@ -5,7 +5,7 @@
   </h2>
   <div *ngFor="let user of this.users">
     <div class="aside-theme">
-      <a [routerLink]="'user/' + user.id">
+      <a [routerLink]="'/user/' + user.id">
         {{ user.name }}
       </a>
     </div>

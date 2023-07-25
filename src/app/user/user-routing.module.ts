@@ -8,10 +8,6 @@ const routes: Routes = [
     redirectTo: 'user/list'
   },
   {
-    path: 'user/list/user/:id',
-    redirectTo: '/user/:id'
-  },
-  {
     path: 'user/list',
     component: ListComponent
   },

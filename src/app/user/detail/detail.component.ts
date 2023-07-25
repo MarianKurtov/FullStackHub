@@ -11,7 +11,7 @@ import { IUser } from '../../interfaces/user';
 export class DetailComponent implements OnInit {
 
   // @ts-ignore
-  user: IUser;
+  public user: IUser;
 
   constructor(
     private userService: UserService,
