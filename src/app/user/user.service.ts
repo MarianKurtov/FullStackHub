@@ -18,6 +18,10 @@ export class UserService {
     return this.http.get<IUser[]>(environment.USERS + 'users');
   }
 
+  loadUser(id: number): Observable<IUser> {
+    return this.http.get<IUser>(environment.USERS + 'users/' + id);
+  }
+
   logIn(): void {
     this.isLogged = true;
     console.log('logIn');
