@@ -5,8 +5,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule} from '@angular/router';
 import { PostModule } from '../post/post.module';
-import {HeaderComponent} from "./header/header.component";
-import {FooterComponent} from "./footer/footer.component";
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ThemeModule } from '../theme/theme.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FooterComponent} from "./footer/footer.component";
   imports: [
     CommonModule,
     RouterModule,
-    PostModule
+    PostModule,
+    ThemeModule
   ]
 })
 export class CoreModule { }
