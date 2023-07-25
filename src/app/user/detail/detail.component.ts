@@ -19,9 +19,10 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-     const id = this.router.snapshot.params['id'];
-     this.userService.loadUser(id).subscribe(user => {
-      this.user = user;
-     })
+    this.router.params.subscribe(({ id }) => {
+      this.userService.loadUser(id).subscribe(user => {
+        this.user = user;
+      });
+    });
   }
 }
