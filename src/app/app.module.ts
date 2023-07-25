@@ -9,10 +9,9 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserModule} from './user/user.module';
-import { SharedModule } from './shared/shared.module';
 import { AccessGuard } from './guards/access.guard';
-import {HeaderComponent} from "./shared/header/header.component";
-import {FooterComponent} from "./shared/footer/footer.component";
+import {HeaderComponent} from "./core/header/header.component";
+import {FooterComponent} from "./core/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import {FooterComponent} from "./shared/footer/footer.component";
     FormsModule,
     CoreModule,
     UserModule,
-    SharedModule,
 
   ],
   providers: [AccessGuard],

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 import { UserRoutingModule } from './user-routing.module';
-import { SharedModule } from '../shared/shared.module';
+import {CoreModule} from "../core/core.module";
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     UserRoutingModule,
-    SharedModule
+    CoreModule
   ]
 })
 export class UserModule { }
