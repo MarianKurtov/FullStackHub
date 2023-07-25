@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserModule} from './user/user.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UserModule} from './user/user.module';
     FormsModule,
     CoreModule,
     UserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [
