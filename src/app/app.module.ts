@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserModule} from './user/user.module';
 import { SharedModule } from './shared/shared.module';
+import { AccessGuard } from './guards/access.guard';
+import {HeaderComponent} from "./shared/header/header.component";
+import {FooterComponent} from "./shared/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -24,13 +27,14 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     CoreModule,
     UserModule,
-    SharedModule
+    SharedModule,
+
   ],
-  providers: [],
+  providers: [AccessGuard],
   bootstrap: [
       AppComponent,
-      // HeaderComponent,
-      // FooterComponent
+      HeaderComponent,
+      FooterComponent
   ]
 })
 export class AppModule { }

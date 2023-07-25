@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoaderComponent } from './loader/loader.component';
+import {RouterLink} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { LoaderComponent } from './loader/loader.component';
     LoaderComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ]
 })
 export class SharedModule { }

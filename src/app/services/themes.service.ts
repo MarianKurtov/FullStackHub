@@ -13,11 +13,11 @@ export class ThemesService {
   constructor(private http: HttpClient) {
   }
 
-  // loadAllThemes(): Observable<ITheme[]> {
-  //   return this.http.get<ITheme[]>(environment.THEMES);
-  // }
-  //
-  // loadAllPosts(): Observable<IPost[]> {
-  //   return this.http.get<IPost[]>(environment.POST);
-  // }
+  loadAllThemes(): Observable<ITheme[]> {
+    return this.http.get<ITheme[]>(environment.THEMES);
+  }
+
+  loadAllPosts(): Observable<IPost[]> {
+    return this.http.get<IPost[]>(environment.POST);
+  }
 }
