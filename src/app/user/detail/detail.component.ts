@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { ActivatedRoute } from '@angular/router';
-import {IUser} from "../../interfaces/user";
+import { IUser } from '../../interfaces/user';
 
 @Component({
   selector: 'app-detail',
@@ -12,7 +12,6 @@ export class DetailComponent implements OnInit {
 
   // @ts-ignore
   user: IUser;
-  loading = 'Loading...';
 
   constructor(
     private userService: UserService,
