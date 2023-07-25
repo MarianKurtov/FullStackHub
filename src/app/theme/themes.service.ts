@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ITheme } from '../interfaces/theme';
+import { ITheme } from './theme';
 import { environment } from '../../environments/environments';
-import { IPost } from '../interfaces/post';
+import { IPost } from '../post/post';
 
 @Injectable({
   providedIn: 'root'

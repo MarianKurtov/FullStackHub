@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ITheme } from '../../interfaces/theme';
+import { ITheme } from '../theme';
 import { ThemesService } from '../themes.service';
 
 @Component({
