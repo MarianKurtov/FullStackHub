@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {IPost} from "../../interfaces/post";
-import {ThemesService} from "../../services/themes.service";
+import { IPost } from '../../interfaces/post';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post',
@@ -11,8 +11,8 @@ export class PostComponent {
   loading = 'Loading...';
   posts: IPost[] | null = null;
 
-  constructor(themeService: ThemesService) {
-    // themeService.loadAllPosts().subscribe( p => {
+  constructor(postService: PostService) {
+    // postService.loadAllPosts().subscribe( p => {
     //   this.posts = p;
     // })
   }
