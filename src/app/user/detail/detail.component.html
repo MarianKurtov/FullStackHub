@@ -6,7 +6,7 @@
   <p>{{ this.user.company }}</p>
   <p>{{ this.user.website }}</p>
 
-  <button *ngIf="(user.id + 1) < 10" [routerLink]="['/user/', user.id + 1]">Next User</button>
-  <p><button *ngIf="(user.id - 1) >= 1" [routerLink]="['/user/', user.id - 1]">Prev User</button></p>
+  <p><button *ngIf="(user.id + 1) < 10" [routerLink]="['/user/', (user.id + 1)]">Next User</button></p>
+  <p><button *ngIf="(user.id - 1) >= 1" [routerLink]="['/user/', (user.id - 1)]">Prev User</button></p>
   <p><button routerLink="/user/list">Back</button></p>
 </div>
