@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { ThemesService } from '../../services/themes.service';
-import { IPost } from '../../interfaces/post';
+import {IPost} from "../../interfaces/post";
+import {ThemesService} from "../../services/themes.service";
 
 @Component({
-  selector: 'app-aside',
-  templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.css']
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css']
 })
-export class AsideComponent {
+export class PostComponent {
   loading = 'Loading...';
   posts: IPost[] | null = null;
 
