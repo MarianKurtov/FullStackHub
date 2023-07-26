@@ -10,8 +10,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserModule} from './user/user.module';
 import { AccessGuard } from './guards/access.guard';
-import {HeaderComponent} from "./core/header/header.component";
-import {FooterComponent} from "./core/footer/footer.component";
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,15 @@ import {FooterComponent} from "./core/footer/footer.component";
     HttpClientModule,
     FormsModule,
     CoreModule,
-    UserModule,
-
+    UserModule
   ],
-  providers: [AccessGuard],
+  providers: [
+    AccessGuard
+  ],
   bootstrap: [
-      AppComponent,
-      HeaderComponent,
-      FooterComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class AppModule { }

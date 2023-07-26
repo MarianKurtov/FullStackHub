@@ -8,11 +8,11 @@ import { UserService } from '../../user/user.service';
 })
 export class HeaderComponent {
 
+  name = 'Marian'
+
   get isLogin(){
     return this.userService.isLogged;
   }
-
-  name = 'Marian'
 
   constructor(public userService: UserService) {
   }
