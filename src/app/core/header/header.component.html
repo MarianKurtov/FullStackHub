@@ -6,10 +6,10 @@
     <div class="mini-navbar">
       <ul>
         <li>
-          <a href="#" (click)="logInHandler()" *ngIf="!isLogin">Login</a>
+          <a routerLink="/user/login" (click)="logInHandler()" *ngIf="!isLogin">Login</a>
         </li>
         <li>
-          <a href="#">Register</a>
+          <a routerLink="/user/register">Register</a>
         </li>
         <li>
           <a href="#" (click)="logInHandler()" *ngIf="isLogin">

@@ -4,6 +4,7 @@ import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './about/about.component';
 import {AccessGuard} from "./guards/access.guard";
 import {ThemeListComponent} from "./theme/theme-list/theme-list.component";
+import {NotFoundComponent} from "./views/not-found/not-found.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'themes',
     component: ThemeListComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

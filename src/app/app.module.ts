@@ -12,12 +12,16 @@ import { UserModule} from './user/user.module';
 import { AccessGuard } from './guards/access.guard';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { IsEmptyDirective } from './directives/is-empty.directive';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    ShortenPipe
+    ShortenPipe,
+    IsEmptyDirective,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,11 @@ import { FooterComponent } from './core/footer/footer.component';
     UserModule
   ],
   providers: [
-    AccessGuard
+    AccessGuard,
+    IsEmptyDirective
+  ],
+  exports: [
+    IsEmptyDirective
   ],
   bootstrap: [
     AppComponent,

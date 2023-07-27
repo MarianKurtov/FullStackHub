@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+
   public isLogged: boolean;
 
   constructor(private http: HttpClient) {

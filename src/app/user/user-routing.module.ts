@@ -10,14 +10,6 @@ const routes: Routes = [
     path: 'user',
     children: [
       {
-        path: 'list',
-        component: ListComponent
-      },
-      {
-        path: ':id',
-        component: DetailComponent
-      },
-      {
         path: 'login',
         component: LoginComponent
       },
@@ -28,6 +20,14 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'list',
+        component: ListComponent
+      },
+      {
+        path: ':id',
+        component: DetailComponent
       }
 ]}];
 
