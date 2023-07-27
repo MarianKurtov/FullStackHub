@@ -7,28 +7,30 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
-    path: 'user',
-    children: [
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'profile',
-        component: ProfileComponent
-      },
-      {
-        path: 'register',
-        component: RegisterComponent
-      },
-      {
-        path: 'list',
-        component: ListComponent
-      },
-      {
-        path: ':id',
-        component: DetailComponent
-      }
-]}];
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'user/list',
+  },
+  {
+    path: 'list',
+    component: ListComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: ':id',
+    component: DetailComponent
+  }
+];
 
 export const UserRoutingModule = RouterModule.forChild(routes);
