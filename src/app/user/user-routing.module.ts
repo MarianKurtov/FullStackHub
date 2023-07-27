@@ -12,10 +12,6 @@ const routes: Routes = [
     redirectTo: 'user/list',
   },
   {
-    path: 'list',
-    component: ListComponent
-  },
-  {
     path: 'login',
     component: LoginComponent
   },
@@ -26,6 +22,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'list',
+    component: ListComponent
   },
   {
     path: ':id',
