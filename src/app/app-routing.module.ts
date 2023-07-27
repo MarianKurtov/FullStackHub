@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './core/home/home.component';
+import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './about/about.component';
 import {AccessGuard} from "./guards/access.guard";
 import {ThemeListComponent} from "./theme/theme-list/theme-list.component";
