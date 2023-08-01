@@ -15,7 +15,7 @@ ul, ol {
 }
 
 blockquote, h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, serif;
+  font-family: Roboto,sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +55,7 @@ p+h1, p+h2, p+h3, p+h4, p+h5, p+h6 {
 blockquote {
   padding: 0 2.5em;
   border-left: 2px solid #000000;
-  font-family: Georgia, serif;
+  font-family: Roboto,sans-serif;
   margin-bottom: 1.5em;
 }
 

@@ -3,7 +3,7 @@
 .error-container {
   text-align: center;
   font-size: 106px;
-  font-family: 'Catamaran', sans-serif;
+  font-family: Roboto,sans-serif;
   font-weight: 800;
   margin: 70px 15px;
 }
@@ -123,12 +123,14 @@ body {
   margin-bottom: 50px;
 }
 html, button, input, select, textarea {
-  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: Roboto,sans-serif;
   color: #bbb;
 }
 h1 {
+
   text-align: center;
   margin: 30px 15px;
+  color: #742266;
 }
 .zoom-area {
   max-width: 490px;
