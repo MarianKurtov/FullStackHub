@@ -1,41 +1,9 @@
-<header>
-  <div class="mini-navbar-wrap">
-    <div class="logo-wrap">
-      <p class="logo"><span class="logo">Full Stack Hub</span></p>
-    </div>
-    <div class="mini-navbar">
-      <ul>
-        <li>
-          <a routerLink="/user/login" (click)="logInHandler()" *ngIf="!isLogin">Login</a>
-        </li>
-        <li>
-          <a routerLink="/user/register">Register</a>
-        </li>
-        <li>
-          <a href="#" (click)="logInHandler()" *ngIf="isLogin">
-              <div>
-                HELLO, {{ name }}
-              </div>
-            <a (click)="logOutHandler()">Logout</a>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <nav>
-    <ul>
-      <li>
-        <a routerLink="/">Home</a>
-      </li>
-      <li>
-        <a routerLink="/about">About</a>
-      </li>
-      <li>
-      <a routerLink="/user/list">Users</a>
-      </li>
-      <li>
-      <a routerLink="/themes">All Themes</a>
-      </li>
-    </ul>
+<header class="header">
+  <img  alt="logo" routerlink="/" tabindex="0" src="https://codexio.bg/assets/logo/logo-horizontal-dark.svg">
+  <nav class="nav-items">
+    <a routerLink="/">Home</a>
+    <a routerLink="user/login">Login</a>
+    <a routerLink="user/register">Register</a>
+    <a routerLink="user/list">users</a>
   </nav>
 </header>

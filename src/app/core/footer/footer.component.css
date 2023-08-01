@@ -1,31 +1,45 @@
-/* footer  */
-
-footer {
-  background: linear-gradient(
-    rgb(47, 93, 170) 0%,
-    rgb(116, 34, 102) 100%);
-  margin-top: 1em;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: 1366px;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgb(47, 93, 170) 0%, rgb(116, 34, 102) 100%);
+  padding: 5px 80px;
 }
 
-footer p {
-  margin: 0;
-  padding: 0;
-  font-size: 0.7em;
-  text-align: center;
+.footer .copy {
+  color: #fff;
 }
 
-footer span {
-  font-size: 1.5em;
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
 }
 
-p {
-  color: white;
+.bottom-links .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
 }
 
-a {
-  color: white;
+.bottom-links .links span {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.bottom-links .links a {
+  text-decoration: none;
+  color: #a1a1a1;
+  padding: 5px 10px;
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  width: 30%;
 }
