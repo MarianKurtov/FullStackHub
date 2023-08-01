@@ -1,33 +1,27 @@
 <form class="login" action="" method="post">
   <div class="container">
-  <fieldset>
-    <h2>Login Form</h2>
-
-      <p class="field ">
-        <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-        <input #userEmail class="input-error" type="email" id="email" placeholder="email">
+    <fieldset>
+      <h2>
+        <span>
+          Login Form
+        </span>
+      </h2>
+      <p class="field">
+        <i class="fa fa-address-card" aria-hidden="true"></i>
+        <input #userEmail class="input-error" type="email" id="email" placeholder="Email...">
       </p>
-
-      <p class="field ">
-        <label for="password"><span><i class="fas fa-envelope"></i></span></label>
-        <input #password class="input-error" type="password" id="password" placeholder="password">
+      <p class="field">
+        <i class="fa fa-address-card" aria-hidden="true"></i>
+        <input #password class="input-error" type="password" id="password" placeholder="Password...">
       </p>
-
-      <p class="error" appIsEmpty >
-        Email is required!
-      </p>
-
-      <p class=“field”>
-        <button disabled>
-          Login
-        </button>
-      </p>
-      <p class="text-center">
-        Have an account?
-        <a routerLink="/user/register">
+      <p>Haven't account?<a routerLink="/user/register">
           Register
-        </a>
-      </p>
-  </fieldset>
+      </a></p>
+      <div class="container">
+        <div class="center">
+          <button>Login</button>
+        </div>
+      </div>
+    </fieldset>
   </div>
 </form>

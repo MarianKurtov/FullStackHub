@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ITheme } from '../theme';
-import { ThemesService } from '../themes.service';
+import { ThemesService } from '../services/themes.service';
 
 @Component({
   selector: 'app-theme-list',
@@ -12,8 +12,8 @@ export class ThemeListComponent {
   loading = 'Loading...';
 
   constructor(public themesService: ThemesService) {
-    // this.themesService.loadAllThemes().subscribe(t => {
-    //   this.themes = t;
-    // })
+    this.themesService.loadAllThemes().subscribe(t => {
+      this.themes = t;
+    })
   }
 }

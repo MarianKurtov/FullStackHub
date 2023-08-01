@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IPost } from '../post';
-import { PostService } from '../post.service';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-post',
@@ -12,8 +12,8 @@ export class PostComponent {
   posts: IPost[] | null = null;
 
   constructor(postService: PostService) {
-    // postService.loadAllPosts().subscribe( p => {
-    //   this.posts = p;
-    // })
+    postService.loadAllPosts().subscribe( p => {
+      this.posts = p;
+    })
   }
 }
