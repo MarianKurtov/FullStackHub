@@ -1,18 +1,19 @@
-<div class="aside">
-<h2 class="title">
-  Recent Themes
-</h2>
-  <div *ngFor="let theme of this.themes">
-    <div class="aside-theme">
-      <a href="#">
-        <h3>{{ theme.title }}</h3>
-        <p>{{ theme.date }}</p>
-        <p><span>{{ theme.lector }}</span></p>
-      </a>
+<div class="container">
+  <div class="aside">
+    <h2 class="title">
+      Recent Themes
+    </h2>
+    <div *ngFor="let theme of this.themes">
+      <div class="aside-theme">
+        <a href="#">
+          <h3>{{ theme.title }}</h3>
+          <p>{{ theme.date }}</p>
+          <p><span>{{ theme.lector }}</span></p>
+        </a>
+      </div>
     </div>
-  </div>
-
-  <div *ngIf="themes === null">
-    {{ loading }}
+    <div *ngIf="themes === null">
+      {{ loading }}
+    </div>
   </div>
 </div>

@@ -31,13 +31,12 @@ span {
 button {
   background-color: #742266;
   color: white;
+  font-family: Roboto,sans-serif;
 }
 
 button:hover {
   cursor: pointer;
 }
-
-
 
 /* mini-navbar */
 
@@ -54,7 +53,7 @@ button:hover {
 /* main  */
 
 main {
-  width: 50%;
+  /*width: 50%;*/
 }
 
 /* theme list item */
@@ -146,6 +145,7 @@ aside {
 .title {
   font-size: 1.5em;
   border-bottom: none;
+  font-family: Roboto,sans-serif;
 }
 
 .aside .aside-theme {
