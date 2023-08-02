@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { AccessGuard } from './guards/access.guard';
 import { ThemeListComponent } from './theme/theme-list/theme-list.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { PreparationComponent } from './views/preparation/preparation.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'themes',
     component: ThemeListComponent
+  },
+  {
+    path: 'preparation',
+    component: PreparationComponent
   },
   {
     path: 'user',
