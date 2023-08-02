@@ -14,6 +14,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { IsEmptyDirective } from './directives/is-empty.directive';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { PreparationComponent } from './views/preparation/preparation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
     HighlightDirective,
     ShortenPipe,
     IsEmptyDirective,
-    NotFoundComponent
+    NotFoundComponent,
+    PreparationComponent
   ],
   imports: [
     BrowserModule,
