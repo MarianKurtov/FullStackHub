@@ -17,6 +17,11 @@
 <!--    </div>-->
 <!--  </div>-->
 
+<input id="name-input" type="text">
+<div appHighlight [isHighLighted]="isHighLighted" [ngClass]="{ 'some': seeClock }" id="clock"> {{ clock }}</div>
+<button (click)="highted()">click</button>
+<!--  " id="clock"-->
+
   <div class="about-me">
     <div class="about-me-text">
       <h2><span>Who Are We?</span></h2>
