@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, interval, map, Observable } from 'rxjs';
+import { filter, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-preparation',
@@ -9,11 +9,21 @@ import { from, interval, map, Observable } from 'rxjs';
 export class PreparationComponent implements OnInit{
 
   clock: any;
-  public seeClock = false;
-  users = [ { name: 'Marian', age: 29 }, { name: 'Ivan', age: 31 } ];
+  seeClock = false;
   isHighLighted = false;
+  users = [ { name: 'Marian', age: 29 }, { name: 'Ivan', age: 31 } ];
 
-  highted(): void {
+  myObservable = new Observable((observable)=>{
+    setTimeout(()=>{observable.next(2)}, 1000);
+    setTimeout(()=>{observable.next(3)}, 2000);
+    setTimeout(()=>{observable.next(Math.random())}, 3000);
+    setTimeout(()=>{observable.next(Math.random())}, 4000);
+    setTimeout(()=>{observable.next(Math.random())}, 5000);
+    // setTimeout(()=>{observable.error(new Error('Something went wrong!'))}, 5000);
+    setTimeout(()=>{observable.next(Math.random())}, 6000);
+  })
+
+  highlighted(): void {
     this.isHighLighted = !this.isHighLighted;
   }
 
@@ -42,22 +52,22 @@ export class PreparationComponent implements OnInit{
     //  ).subscribe(console.log)
 
     // Clock
-    const clock = document.getElementById("clock");
+    // const clock = document.getElementById("clock");
+    //
+    // interval(1000).pipe(
+    //   map(() => new Date)
+    //   ).subscribe(
+    //   date => {
+    //     const h = date.getHours();
+    //     const m = date.getMinutes();
+    //     const s = date.getSeconds();
+    //     this.clock = `${h}:${m}:${s}`;
+    //   }
+    // )
 
-    interval(1000).pipe(
-      map(() => new Date)
-      ).subscribe(
-      date => {
-        const h = date.getHours();
-        const m = date.getMinutes();
-        const s = date.getSeconds();
-        this.clock = `${h}:${m}:${s}`;
-      }
-    )
-    // End Clock
+    // const users$ = from(this.users).subscribe(console.log);
 
-    const users$ = from(this.users).subscribe(console.log);
-
-
+    // this.myObservable.pipe(filter(num => num % 2));
+    this.myObservable.subscribe(console.log);
   }
 }
