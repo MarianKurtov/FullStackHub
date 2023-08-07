@@ -1,27 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { filter, Observable} from 'rxjs';
+import {filter, from, Observable,} from 'rxjs';
 
 @Component({
   selector: 'app-preparation',
   templateUrl: './preparation.component.html',
   styleUrls: ['./preparation.component.css']
 })
-export class PreparationComponent implements OnInit{
+export class PreparationComponent implements OnInit {
 
   clock: any;
   seeClock = false;
   isHighLighted = false;
-  users = [ { name: 'Marian', age: 29 }, { name: 'Ivan', age: 31 } ];
+  users = [{ name: 'Marian', age: 29 }, { name: 'Ivan', age: 31 }];
+  // myObservable = new Observable((observable)=>{
+  //   setTimeout(()=>{observable.next(2)}, 1000);
+  //   setTimeout(()=>{observable.next(3)}, 2000);
+  //   setTimeout(()=>{observable.next(Math.random())}, 3000);
+  //   setTimeout(()=>{observable.next(Math.random())}, 4000);
+  //   setTimeout(()=>{observable.next(Math.random())}, 5000);
+  //   // setTimeout(()=>{observable.error(new Error('Something went wrong!'))}, 5000);
+  //   setTimeout(()=>{observable.next(Math.random())}, 6000);
+  // })
 
-  myObservable = new Observable((observable)=>{
-    setTimeout(()=>{observable.next(2)}, 1000);
-    setTimeout(()=>{observable.next(3)}, 2000);
-    setTimeout(()=>{observable.next(Math.random())}, 3000);
-    setTimeout(()=>{observable.next(Math.random())}, 4000);
-    setTimeout(()=>{observable.next(Math.random())}, 5000);
-    // setTimeout(()=>{observable.error(new Error('Something went wrong!'))}, 5000);
-    setTimeout(()=>{observable.next(Math.random())}, 6000);
-  })
+
+
+  myObservable = new Observable(( observable ) => {
+    setTimeout(() => { observable.next( { name: 'Marian', age: 26 } )}, 1000);
+    setTimeout(() => { observable.next( { name: 'asd', age: 27 } )}, 2000);
+    setTimeout(() => { observable.next( { name: 'das', age: 28 } )}, 3000);
+    setTimeout(() => { observable.next( { name: 'asdasda', age: 29 } )}, 4000);
+    setTimeout(() => { observable.next( { name: 'adssds', age: 20 } )}, 5000);
+    setTimeout(() => { observable.next( { name: 'asds', age: 22 } )}, 6000);
+  });
+
+  values = [
+    {
+      name: "John",
+      age: 30
+    },
+    {
+      name: "alex",
+      age: 40
+    }
+  ];
 
   highlighted(): void {
     this.isHighLighted = !this.isHighLighted;
@@ -67,7 +88,20 @@ export class PreparationComponent implements OnInit{
 
     // const users$ = from(this.users).subscribe(console.log);
 
-    // this.myObservable.pipe(filter(num => num % 2));
-    this.myObservable.subscribe(console.log);
+
+
+    // this.myObservable.pipe(
+    //   filter(val => {
+    //     return val.age > 30;
+    //   })
+    // ).subscribe(val => console.log(val));
+
+    from(this.values)
+      .pipe(filter(val => {
+          return val.age > 30;
+        })
+      )
+      .subscribe(val => console.log(val));
   }
+
 }
