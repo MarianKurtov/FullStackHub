@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {filter, from, Observable,} from 'rxjs';
+import {filter, from, interval, map, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-preparation',
@@ -12,17 +12,6 @@ export class PreparationComponent implements OnInit {
   seeClock = false;
   isHighLighted = false;
   users = [{ name: 'Marian', age: 29 }, { name: 'Ivan', age: 31 }];
-  // myObservable = new Observable((observable)=>{
-  //   setTimeout(()=>{observable.next(2)}, 1000);
-  //   setTimeout(()=>{observable.next(3)}, 2000);
-  //   setTimeout(()=>{observable.next(Math.random())}, 3000);
-  //   setTimeout(()=>{observable.next(Math.random())}, 4000);
-  //   setTimeout(()=>{observable.next(Math.random())}, 5000);
-  //   // setTimeout(()=>{observable.error(new Error('Something went wrong!'))}, 5000);
-  //   setTimeout(()=>{observable.next(Math.random())}, 6000);
-  // })
-
-
 
   myObservable = new Observable(( observable ) => {
     setTimeout(() => { observable.next( { name: 'Marian', age: 26 } )}, 1000);
@@ -73,22 +62,20 @@ export class PreparationComponent implements OnInit {
     //  ).subscribe(console.log)
 
     // Clock
-    // const clock = document.getElementById("clock");
-    //
-    // interval(1000).pipe(
-    //   map(() => new Date)
-    //   ).subscribe(
-    //   date => {
-    //     const h = date.getHours();
-    //     const m = date.getMinutes();
-    //     const s = date.getSeconds();
-    //     this.clock = `${h}:${m}:${s}`;
-    //   }
-    // )
+    const clock = document.getElementById("clock");
+
+    interval(1000).pipe(
+      map(() => new Date)
+      ).subscribe(
+      date => {
+        const h = date.getHours();
+        const m = date.getMinutes();
+        const s = date.getSeconds();
+        this.clock = `${h}:${m}:${s}`;
+      }
+    )
 
     // const users$ = from(this.users).subscribe(console.log);
-
-
 
     // this.myObservable.pipe(
     //   filter(val => {
@@ -103,5 +90,4 @@ export class PreparationComponent implements OnInit {
       )
       .subscribe(val => console.log(val));
   }
-
 }

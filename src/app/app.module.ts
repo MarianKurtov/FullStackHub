@@ -15,6 +15,10 @@ import { FooterComponent } from './core/footer/footer.component';
 import { IsEmptyDirective } from './directives/is-empty.directive';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { PreparationComponent } from './views/preparation/preparation.component';
+import { reducers } from '../+store';
+import { environment } from '../environments/environments';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,7 @@ import { PreparationComponent } from './views/preparation/preparation.component'
     ShortenPipe,
     IsEmptyDirective,
     NotFoundComponent,
-    PreparationComponent
+    PreparationComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { PreparationComponent } from './views/preparation/preparation.component'
     HttpClientModule,
     FormsModule,
     CoreModule,
-    UserModule
+    UserModule,
+    StoreModule.forRoot(reducers),
+    environment.production ? [] : StoreDevtoolsModule.instrument()
   ],
   providers: [
     AccessGuard,

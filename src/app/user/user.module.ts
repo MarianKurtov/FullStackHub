@@ -19,7 +19,6 @@ import { RegisterComponent } from './register/register.component';
     imports: [
         CommonModule,
         UserRoutingModule,
-
     ],
   providers: [
     UserService

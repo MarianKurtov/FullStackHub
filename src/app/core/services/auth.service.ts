@@ -1,0 +1,26 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+
+  constructor() { }
+
+  login(): void {
+
+  }
+
+  register(): void {
+
+  }
+
+  logout(): void {
+
+  }
+
+  authenticate(): void {
+
+  }
+
+}
