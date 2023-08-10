@@ -10,18 +10,18 @@ export class HeaderComponent {
 
   name = 'Marian'
 
-  get isLogin(){
-    return this.userService.isLogged;
-  }
+  // get isLogin(){
+  //    return this.userService.isLogged;
+  // }
 
   constructor(public userService: UserService) {
   }
 
   logInHandler() {
-    this.userService.logIn();
+    // this.userService.logIn();
   }
 
   logOutHandler() {
-    this.userService.logOut();
+    // this.userService.logOut();
   }
 }

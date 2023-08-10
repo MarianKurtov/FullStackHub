@@ -20,7 +20,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.params.subscribe(({ id }) => {
-      this.userService.loadUser(id).subscribe(user => {
+      this.userService.getCurrentUserProfile(id).subscribe(user => {
         this.user = user;
       });
     });

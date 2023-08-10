@@ -1,27 +1,35 @@
-<form class="login" action="" method="post">
+<form #f="ngForm" class="login" (ngSubmit)="submitFormHandler(f.value)">
   <div class="container">
+
     <fieldset>
-      <h2>
-        <span>
-          Login Form
-        </span>
-      </h2>
-      <p class="field">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <input #userEmail class="input-error" type="email" id="email" placeholder="Email...">
+      <h2>Login Form</h2>
+
+      <p class="field field-icon">
+        <label for="email"><i class="fa fa-address-card" aria-hidden="true"></i></label>
+        <input #userEmail="ngModel" class="input-error" type="email" name="email" id="email" placeholder="Email..." ngModel required email>
       </p>
-      <p class="field">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <input #password class="input-error" type="password" id="password" placeholder="Password...">
+      <p *ngIf="userEmail.touched && userEmail?.errors" class="error">
+        Email is not valid!
       </p>
-      <p>Haven't account?<a routerLink="/user/register">
-          Register
-      </a></p>
+
+      <p class="field field-icon">
+        <label for="password"><i class="fa fa-address-card"  aria-hidden="true"></i></label>
+        <input #userPassword="ngModel" type="password" name="password" id="password" placeholder="Password..." ngModel email minlength="4" required>
+      </p>
+
+<!--  Need more work-->
+      <p *ngIf="userPassword?.hasError('minlength') && userPassword?.hasError('required')" class = "alert alert-danger">
+        Password must be min 4 symbols!
+      </p>
+
+      <p>Haven't account?<a routerLink="/user/register">Register</a></p>
+
       <div class="container">
         <div class="center">
-          <button>Login</button>
+          <button [disabled]="f.invalid">Login</button>
         </div>
       </div>
     </fieldset>
+
   </div>
 </form>

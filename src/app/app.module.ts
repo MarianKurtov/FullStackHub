@@ -9,7 +9,6 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { UserModule} from './user/user.module';
-import { AccessGuard } from './guards/access.guard';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { IsEmptyDirective } from './directives/is-empty.directive';
@@ -19,6 +18,7 @@ import { reducers } from '../+store';
 import { environment } from '../environments/environments';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AuthGuard } from './core/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,8 +40,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     environment.production ? [] : StoreDevtoolsModule.instrument()
   ],
   providers: [
-    AccessGuard,
-    IsEmptyDirective
+    IsEmptyDirective,
+    AuthGuard
   ],
   exports: [
     IsEmptyDirective

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {filter, from, interval, map, Observable} from 'rxjs';
 
 @Component({
@@ -82,12 +82,41 @@ export class PreparationComponent implements OnInit {
     //     return val.age > 30;
     //   })
     // ).subscribe(val => console.log(val));
+    //
+    // from(this.values)
+    //   .pipe(filter(val => {
+    //       return val.age > 30;
+    //     })
+    //   )
+    //   .subscribe(val => console.log(val));
+    //
+    // const numbers = from([1, 2, 3, 4, 5]);
+    //
+    // numbers.pipe(
+    //   filter(num => num % 2 === 0), // Filter even numbers
+    //   map(num => num * 2) // Double each number
+    // ).subscribe(result => console.log(`Result: ${result}`));
+    //
 
-    from(this.values)
-      .pipe(filter(val => {
-          return val.age > 30;
-        })
-      )
-      .subscribe(val => console.log(val));
+
+
+    this.myObservable.pipe(
+      filter((value) => {
+        // @ts-ignore
+        return value % 2 === 0
+      })
+    ).subscribe(console.log)
+
+
+
+
+
+
+
+
+
+
+
+
   }
 }

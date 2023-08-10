@@ -8,8 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ThemeModule } from '../theme/theme.module';
 import { AboutComponent } from '../about/about.component';
-import {UserModule} from "../user/user.module";
-
 @NgModule({
   declarations: [
     RxJSComponent,
