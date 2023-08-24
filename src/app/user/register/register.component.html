@@ -1,27 +1,32 @@
-<form class="register" action="" method="post">
+<form [formGroup]="registerForm" (ngSubmit)="submitForm()">
   <div class="container">
+
     <fieldset>
-      <h2><span>Register Form</span></h2>
-      <p class="field">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <input #userFName class="input-error" type="text" id=”fname” placeholder="First name">
-      </p>
-      <p class="field">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <input #userLName class="input-error" type="text" id=”lname” placeholder="Last name">
-      </p>
-      <p class="field">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <input #userEmail class="input-error" type="email" id=”email” placeholder="Email Address">
-      </p>
-      <p>Already have account?<a routerLink="/user/login">
-        Login
-      </a></p>
-      <div class="container">
-        <div class="center">
-          <button>Register</button>
+      <h2>Register Form</h2>
+        <p class="field field-icon">
+          <label for="fName"><i class="fa fa-address-card" aria-hidden="true"></i></label>
+          <input type="text" id="fName" formControlName="fName" [placeholder]="frsNameInp">
+        </p>
+
+        <p class="field field-icon">
+          <label for="lName"><i class="fa fa-address-card" aria-hidden="true"></i></label>
+          <input type="email" id="lName" formControlName="lName" [placeholder]="lstNameInp">
+        </p>
+
+        <p class="field field-icon">
+          <label for="email"><i class="fa fa-address-card" aria-hidden="true"></i></label>
+          <input type="email" id="email" formControlName="email" [placeholder]="emailInput">
+        </p>
+
+        <p>Already have account?<a routerLink="/user/login">Login</a>
+
+        <div class="container">
+          <div class="center">
+            <button type="submit">Submit</button>
+          </div>
         </div>
-      </div>
     </fieldset>
   </div>
 </form>
+
+

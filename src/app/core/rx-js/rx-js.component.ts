@@ -8,7 +8,7 @@ const source = fromEvent(document, 'keyup');
 const example = source.pipe(map(event => `Event time: ${event.timeStamp}`));
 
 //output (example): 'Event time: 7276.390000000001'
-const subscribe = example.subscribe(val => console.log(val));
+// const subscribe = example.subscribe(val => console.log(val));
 
 //Create time logger with rxJS
 // interval(1000).pipe(map(() => new Date())).subscribe(console.log);

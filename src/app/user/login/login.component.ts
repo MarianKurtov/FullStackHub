@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../services/user.service';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  hasFormError: any;
-  showEmailError: any;
-  showPasswordError: any;
 
-  constructor(
-      private userService: UserService,
-      private router: Router
-  ) { }
+  loginForm: FormGroup;
+  nameInput = 'Insert your name...';
+  emailInput = 'Insert your email here...';
 
-  submitFormHandler(value: any) {
-
+  constructor(private formBuilder: FormBuilder) {
+    this.loginForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]
+    });
   }
 
+  submitForm(): void {
+    if (this.loginForm.valid) {
+      console.log('Form submitted:', this.loginForm.value);
+    }else {
+      console.log('Form is invalid.')
+    }
+  }
 }

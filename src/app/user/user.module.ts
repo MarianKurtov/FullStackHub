@@ -7,7 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserService } from './services/user.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
         CommonModule,
         UserRoutingModule,
         FormsModule,
+        ReactiveFormsModule,
     ],
   providers: [
     UserService

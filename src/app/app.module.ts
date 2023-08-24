@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShortenPipe } from './pipes/shorten.pipe';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserModule} from './user/user.module';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
@@ -29,16 +29,17 @@ import { AuthGuard } from './core/guards/auth.guard';
     NotFoundComponent,
     PreparationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    CoreModule,
-    UserModule,
-    StoreModule.forRoot(reducers),
-    environment.production ? [] : StoreDevtoolsModule.instrument()
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        CoreModule,
+        UserModule,
+        StoreModule.forRoot(reducers),
+        environment.production ? [] : StoreDevtoolsModule.instrument(),
+        ReactiveFormsModule
+    ],
   providers: [
     IsEmptyDirective,
     AuthGuard

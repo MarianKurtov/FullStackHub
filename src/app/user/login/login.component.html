@@ -1,35 +1,25 @@
-<form #f="ngForm" class="login" (ngSubmit)="submitFormHandler(f.value)">
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
   <div class="container">
-
     <fieldset>
       <h2>Login Form</h2>
 
       <p class="field field-icon">
-        <label for="email"><i class="fa fa-address-card" aria-hidden="true"></i></label>
-        <input #userEmail="ngModel" class="input-error" type="email" name="email" id="email" placeholder="Email..." ngModel required email>
-      </p>
-      <p *ngIf="userEmail.touched && userEmail?.errors" class="error">
-        Email is not valid!
+        <label for="name"><i class="fa fa-address-card" aria-hidden="true"></i></label>
+        <input type="text" id="name" formControlName="name" [placeholder]="nameInput">
       </p>
 
       <p class="field field-icon">
-        <label for="password"><i class="fa fa-address-card"  aria-hidden="true"></i></label>
-        <input #userPassword="ngModel" type="password" name="password" id="password" placeholder="Password..." ngModel email minlength="4" required>
-      </p>
-
-<!--  Need more work-->
-      <p *ngIf="userPassword?.hasError('minlength') && userPassword?.hasError('required')" class = "alert alert-danger">
-        Password must be min 4 symbols!
+        <label for="email"><i class="fa fa-address-card" aria-hidden="true"></i></label>
+        <input type="email" id="email" formControlName="email" [placeholder]="emailInput">
       </p>
 
       <p>Haven't account?<a routerLink="/user/register">Register</a></p>
-
       <div class="container">
         <div class="center">
-          <button [disabled]="f.invalid">Login</button>
+          <button type="submit">Submit</button>
         </div>
       </div>
     </fieldset>
-
   </div>
 </form>
+
