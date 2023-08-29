@@ -1,4 +1,4 @@
-import {Directive, Input, OnChanges, SimpleChanges} from '@angular/core';
+import { Directive, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[appIsEmpty]',
@@ -16,5 +16,4 @@ export class IsEmptyDirective implements OnChanges{
     // @ts-ignore
     this.isEmpty = !simpleChanges?.someValue.currentValue || true;
   }
-
 }
