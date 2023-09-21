@@ -7,14 +7,13 @@ import { PostModule } from '../post/post.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ThemeModule } from '../theme/theme.module';
-import { AboutComponent } from '../about/about.component';
+
 @NgModule({
   declarations: [
     RxJSComponent,
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
   ],
   exports: [
     HomeComponent,

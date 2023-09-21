@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ITheme } from '../theme';
 import { ThemesService } from '../services/themes.service';
 
@@ -7,13 +7,16 @@ import { ThemesService } from '../services/themes.service';
   templateUrl: './theme-list.component.html',
   styleUrls: ['./theme-list.component.css']
 })
-export class ThemeListComponent {
+export class ThemeListComponent implements OnInit{
   themes: ITheme[] | null = null;
   loading = 'Loading...';
 
   constructor(public themesService: ThemesService) {
-    this.themesService.loadAllThemes().subscribe(t => {
-      this.themes = t;
+  }
+
+  ngOnInit(): void {
+    this.themesService.loadAllThemes().subscribe(theme => {
+      this.themes = theme;
     })
   }
 }
